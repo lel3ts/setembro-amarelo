@@ -1292,3 +1292,148 @@ img {
 
 
     .breathing-circle {
+    width: 190px;
+    height: 190px;
+
+    transition-duration: 3s;
+}
+
+
+.breathing-circle-inner {
+    width: 145px;
+    height: 145px;
+}
+
+
+.breathing-circle-inner span {
+    font-size: 1.15rem;
+}
+
+
+.breathing-circle-inner small {
+    font-size: 0.65rem;
+}
+
+
+.breathing-info {
+    padding: 35px 25px;
+}
+
+
+.breathing-info h3 {
+    font-size: 1.65rem;
+}
+
+
+.breathing-controls {
+    flex-direction: column;
+}
+
+
+.breathing-controls .button {
+    width: 100%;
+}
+
+
+.message-card {
+    min-height: 420px;
+
+    padding: 40px 28px;
+}
+
+
+.message-decoration {
+    right: -15px;
+    top: -25px;
+
+    font-size: 14rem;
+}
+
+
+.message-content h2 {
+    font-size: 2rem;
+}
+
+
+.support-grid {
+    grid-template-columns: 1fr;
+}
+
+
+.support-card {
+    padding: 28px;
+}
+
+
+.emergency-card {
+    padding: 40px 28px;
+
+    gap: 35px;
+}
+
+
+.emergency-content h2 {
+    font-size: 2.1rem;
+}
+
+
+.emergency-number {
+    font-size: 4rem;
+}
+
+
+.emergency-action {
+    align-items: stretch;
+
+    text-align: center;
+}
+
+
+.emergency-action .button {
+    width: 100%;
+}
+
+
+.footer {
+    padding-top: 50px;
+}
+
+
+.footer-content {
+    gap: 35px;
+
+    padding-bottom: 35px;
+}
+
+
+.footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+}
+
+
+}
+
+
+/* ========================================
+   ACESSIBILIDADE — REDUÇÃO DE MOVIMENTO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
