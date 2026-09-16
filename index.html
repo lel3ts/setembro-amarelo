@@ -1,90 +1,518 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pausa — Um espaço para você</title>
-
     <meta
         name="description"
-        content="Um espaço de acolhimento, conscientização e informação sobre saúde emocional."
+        content="Pausa — um espaço de conscientização, apoio emocional e informação."
     >
 
+    <title>Pausa — Um espaço para você</title>
+
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
         rel="stylesheet"
     >
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- ==============================
+         CABEÇALHO
+    =============================== -->
+
     <header class="header">
+
         <div class="container header-content">
 
             <a href="#inicio" class="logo">
-                pausa<span>.</span>
+                Pausa<span>.</span>
             </a>
 
             <nav class="nav" aria-label="Navegação principal">
                 <a href="#inicio">Início</a>
-                <a href="#respirar">Respirar</a>
+                <a href="#respiracao">Respirar</a>
                 <a href="#apoio">Apoio</a>
-                <a href="#emergencia">Ajuda</a>
+                <a href="#emergencia">188</a>
             </nav>
 
-            <a href="tel:188" class="header-help">
-                Ligue 188
-            </a>
-
         </div>
+
     </header>
 
 
     <main>
 
-        <!-- Seção principal -->
+        <!-- ==============================
+             HERO
+        =============================== -->
+
         <section class="hero" id="inicio">
+
             <div class="container hero-content">
 
                 <div class="hero-text">
 
-                    <p class="eyebrow">
-                        setembro amarelo · cuidado emocional
-                    </p>
+                    <span class="eyebrow">
+                        Um espaço para respirar
+                    </span>
 
                     <h1>
-                        Às vezes,<br>
-                        tudo que você precisa<br>
-                        é de uma <em>pausa.</em>
+                        Você não precisa
+                        <span>passar por tudo sozinho.</span>
                     </h1>
 
-                    <p class="hero-description">
-                        Um espaço para respirar, desacelerar e lembrar
-                        que pedir ajuda também é uma forma de cuidado.
+                    <p>
+                        Às vezes, tudo o que precisamos é de alguns minutos
+                        para desacelerar, respirar e lembrar que pedir ajuda
+                        também é um ato de cuidado.
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#respirar" class="button button-primary">
+
+                        <a
+                            href="#respiracao"
+                            class="button button-primary"
+                        >
                             Fazer uma pausa
                         </a>
 
-                        <a href="#apoio" class="button button-secondary">
+                        <a
+                            href="#apoio"
+                            class="button button-secondary"
+                        >
                             Encontrar apoio
                         </a>
+
                     </div>
 
                 </div>
 
-                <div class="hero-visual" aria-hidden="true">
 
-                    <div class="sun-shape"></div>
+                <div class="hero-decoration" aria-hidden="true">
 
-                    <div class="hero-card">
-                        <span class="
+                    <div class="hero-shape shape-one"></div>
+                    <div class="hero-shape shape-two"></div>
+
+                    <div class="hero-circle">
+
+                        <div class="hero-circle-content">
+                            <span>respire</span>
+                            <strong>com calma</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             RESPIRAÇÃO
+        =============================== -->
+
+        <section
+            class="breathing-section section"
+            id="respiracao"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        Um momento para você
+                    </span>
+
+                    <h2>
+                        Vamos respirar juntos?
+                    </h2>
+
+                    <p>
+                        Encontre uma posição confortável e acompanhe
+                        o ritmo do círculo. Não tenha pressa.
+                    </p>
+
+                </div>
+
+
+                <div class="breathing-card">
+
+                    <div class="breathing-visual">
+
+                        <div
+                            class="breathing-circle"
+                            id="breathing-circle"
+                            aria-hidden="true"
+                        >
+
+                            <div class="breathing-circle-inner">
+                                <span id="breathing-text">
+                                    Pronto?
+                                </span>
+
+                                <small>
+                                    acompanhe o ritmo
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="breathing-info">
+
+                        <span class="step-label">
+                            EXERCÍCIO GUIADO
+                        </span>
+
+                        <h3 id="breathing-instruction">
+                            Quando estiver pronto, comece.
+                        </h3>
+
+                        <p>
+                            O exercício alterna entre inspirar,
+                            segurar e expirar.
+                        </p>
+
+                        <div
+                            class="breathing-timer"
+                            id="breathing-timer"
+                            aria-live="polite"
+                        >
+                            00:00
+                        </div>
+
+
+                        <div class="breathing-controls">
+
+                            <button
+                                type="button"
+                                class="button button-primary"
+                                id="breathing-button"
+                            >
+                                Iniciar
+                            </button>
+
+                            <button
+                                type="button"
+                                class="button button-secondary"
+                                id="pause-button"
+                                disabled
+                            >
+                                Pausar
+                            </button>
+
+                            <button
+                                type="button"
+                                class="button button-ghost"
+                                id="reset-button"
+                            >
+                                Reiniciar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             MENSAGEM
+        =============================== -->
+
+        <section class="message-section section">
+
+            <div class="container">
+
+                <div class="message-card">
+
+                    <div class="message-decoration">
+                        <span>“</span>
+                    </div>
+
+                    <div class="message-content">
+
+                        <span class="eyebrow">
+                            Uma mensagem para você
+                        </span>
+
+                        <h2 id="message-text">
+                            Você não precisa resolver tudo hoje.
+                        </h2>
+
+                        <p>
+                            Pare por um instante. Leia com calma.
+                            Cuide de você no seu próprio ritmo.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="button button-primary"
+                            id="message-button"
+                        >
+                            Outra mensagem
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             APOIO
+        =============================== -->
+
+        <section
+            class="support-section section"
+            id="apoio"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        Você não está sozinho
+                    </span>
+
+                    <h2>
+                        Onde buscar apoio
+                    </h2>
+
+                    <p>
+                        Existem diferentes portas de entrada para encontrar
+                        orientação e cuidado em saúde mental.
+                    </p>
+
+                </div>
+
+
+                <div class="support-grid">
+
+                    <article class="support-card">
+
+                        <div class="support-icon">
+                            01
+                        </div>
+
+                        <h3>
+                            CAPS
+                        </h3>
+
+                        <p>
+                            Os Centros de Atenção Psicossocial oferecem
+                            atendimento especializado em saúde mental
+                            dentro da rede pública.
+                        </p>
+
+                        <span class="card-link">
+                            Rede pública de cuidado
+                        </span>
+
+                    </article>
+
+
+                    <article class="support-card">
+
+                        <div class="support-icon">
+                            02
+                        </div>
+
+                        <h3>
+                            UBS
+                        </h3>
+
+                        <p>
+                            As Unidades Básicas de Saúde podem acolher,
+                            orientar e encaminhar para outros serviços
+                            quando necessário.
+                        </p>
+
+                        <span class="card-link">
+                            Porta de entrada
+                        </span>
+
+                    </article>
+
+
+                    <article class="support-card">
+
+                        <div class="support-icon">
+                            03
+                        </div>
+
+                        <h3>
+                            Clínica-escola
+                        </h3>
+
+                        <p>
+                            Algumas instituições de ensino oferecem
+                            atendimento psicológico supervisionado
+                            à comunidade.
+                        </p>
+
+                        <span class="card-link">
+                            Atendimento supervisionado
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             EMERGÊNCIA / CVV
+        =============================== -->
+
+        <section
+            class="emergency-section section"
+            id="emergencia"
+        >
+
+            <div class="container">
+
+                <div class="emergency-card">
+
+                    <div class="emergency-content">
+
+                        <span class="eyebrow">
+                            Precisa conversar agora?
+                        </span>
+
+                        <h2>
+                            Você pode pedir ajuda.
+                        </h2>
+
+                        <p>
+                            O CVV oferece apoio emocional pelo telefone,
+                            de forma gratuita e sigilosa.
+                        </p>
+
+                    </div>
+
+
+                    <div class="emergency-action">
+
+                        <span class="emergency-label">
+                            Ligue
+                        </span>
+
+                        <span class="emergency-number">
+                            188
+                        </span>
+
+                        <a
+                            href="tel:188"
+                            class="button button-light"
+                        >
+                            Ligar para o CVV
+                        </a>
+
+                        <a
+                            href="https://cvv.org.br/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="cvv-link"
+                        >
+                            Acessar cvv.org.br →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         RODAPÉ
+    =============================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#inicio" class="logo">
+                    Pausa<span>.</span>
+                </a>
+
+                <p>
+                    Um pequeno espaço para respirar,
+                    desacelerar e buscar apoio.
+                </p>
+
+            </div>
+
+
+            <div class="footer-disclaimer">
+
+                <strong>
+                    Projeto acadêmico
+                </strong>
+
+                <p>
+                    Esta aplicação foi desenvolvida para fins acadêmicos
+                    e não substitui atendimento psicológico, psiquiátrico
+                    ou qualquer outro atendimento profissional de saúde.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Pausa — Setembro Amarelo
+            </p>
+
+            <p>
+                Feito com cuidado.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
